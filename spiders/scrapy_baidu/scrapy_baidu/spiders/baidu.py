@@ -8,14 +8,11 @@ class BaiduSpider(scrapy.Spider):
     print("sdddddddddddddddddddddddddddddddddddddddddd")
 
     def parse(self, response):
-        print("sdddddddddddddddddddddddddddddddddddddddddd")
+        print("baidu4555555555555555555555555555555555555555555555555555555")
         # 根据实际页面结构调整XPath选择器
-        news_hot_search_list_selector = '//*[@id="s_xmancard_news_new"]/div/div[1]/div/div/ul/li'
-
-        # 提取新闻热搜列表
-        for item in response.xpath(news_hot_search_list_selector):
-            print(99898)
-            print("sdds")
+        t = response.xpath('//*[@id="lm-new"]/a/span').extract_first()
+        print(t)
+        print(11)
 
 # 运行爬虫
 # scrapy crawl baidu
