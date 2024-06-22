@@ -8,7 +8,6 @@
 from itemadapter import ItemAdapter
 
 
-class ScrapyBaiduPipeline:
+class BaiduTopPipeline:
     def process_item(self, item, spider):
         return item
-

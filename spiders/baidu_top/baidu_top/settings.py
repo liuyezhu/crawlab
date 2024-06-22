@@ -1,4 +1,4 @@
-# Scrapy settings for scrapy_baidu project
+# Scrapy settings for baidu_top project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,19 +7,19 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "scrapy_baidu"
+BOT_NAME = "baidu_top"
 
-SPIDER_MODULES = ["scrapy_baidu.spiders"]
-NEWSPIDER_MODULE = "scrapy_baidu.spiders"
+SPIDER_MODULES = ["baidu_top.spiders"]
+NEWSPIDER_MODULE = "baidu_top.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "scrapy_baidu (+http://www.yourdomain.com)"
+#USER_AGENT = "baidu_top (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-# 设置是否遵守robots.txt文件
-# ROBOTSTXT_OBEY = True
 ROBOTSTXT_OBEY = False
+
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "scrapy_baidu.middlewares.ScrapyBaiduSpiderMiddleware": 543,
+#    "baidu_top.middlewares.BaiduTopSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "scrapy_baidu.middlewares.ScrapyBaiduDownloaderMiddleware": 543,
+#    "baidu_top.middlewares.BaiduTopDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "scrapy_baidu.pipelines.ScrapyBaiduPipeline": 300,
+#    "baidu_top.pipelines.BaiduTopPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -93,15 +93,9 @@ ROBOTSTXT_OBEY = False
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 COOKIES_ENABLED = True
-
-MIDDLEWARES = [
-    # 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
-    # 其他中间件...
-]
-
-
 # 加入到 scrapy_quotes/scrapy_quotes/settings.py 最后
 ITEM_PIPELINES = {
     'crawlab.CrawlabPipeline': 300,

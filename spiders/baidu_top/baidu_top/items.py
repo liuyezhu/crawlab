@@ -6,10 +6,13 @@
 import scrapy
 
 
-class ScrapyBaiduItem(scrapy.Item):
+class BaiduTopItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    index = scrapy.Field()
     title = scrapy.Field()
-    link = scrapy.Field()
     desc = scrapy.Field()
+    pic = scrapy.Field()
+    url = scrapy.Field()
+    mobile_url = scrapy.Field()
     pass
